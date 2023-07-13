@@ -11,13 +11,78 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
         android:text="@string/Translator"
         android:textColor="@color/black"
-        android:textSize="52sp"
-        android:fontFamily="@font/alata"
+        android:textSize="42sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <EditText
+        android:layout_width="352dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="14dp"
+        android:layout_height="150dp"
+        android:hint="@string/hint"
+        android:textColor="@color/black"
+        android:background="@drawable/button_style"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:maxLines="10"
+        android:minLines="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.14"
+        tools:ignore="LabelFor"
+        android:id="@+id/engText"/>
+
+    <TextView
+        android:layout_width="352dp"
+        android:layout_height="150dp"
+        android:background="@drawable/button_style"
+        android:gravity="top|start"
+        android:lines="10"
+        android:maxLines="10"
+        android:minLines="7"
+        android:paddingLeft="14dp"
+        android:paddingTop="6dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="6dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.563"
+        tools:ignore="LabelFor"
+        android:id="@+id/morseText"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/translateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_style"
+
+        android:fontFamily="@font/alata"
+        android:text="@string/buttonTranslateText"
+        android:textAllCaps="true"
+
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morseText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
