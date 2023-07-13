@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Morse</string>
+    <string name="buttonTranslateText">Translate</string>
+    <string name="buttonAlphabetText">Alphabet</string>
+    <string name="Translator">Translator</string>
+</resources>
