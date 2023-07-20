@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <size android:height="50dp" android:width="172dp"/>
+            <size android:height="100dp" android:width="100dp"/>
             <solid android:color="@color/white"/>
             <corners android:radius="20dp"/>
         </shape>
@@ -10,7 +10,7 @@
 
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <size android:height="50dp" android:width="172dp"/>
+            <size android:height="100dp" android:width="100dp"/>
             <solid android:color="@color/white"/>
             <corners android:radius="20dp"/>
         </shape>
@@ -18,9 +18,9 @@
 
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
-            <size android:height="50dp" android:width="172dp"/>
-            <solid android:color="@color/white"/>
+            <size android:height="150dp" android:width="150dp"/>
             <corners android:radius="20dp"/>
+            <solid android:color="@color/white" />
         </shape>
     </item>
 </selector>

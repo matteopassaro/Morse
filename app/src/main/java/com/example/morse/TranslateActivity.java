@@ -14,7 +14,6 @@ public class TranslateActivity extends AppCompatActivity {
     private TextView output;
     private TextView english;
 
-
     public void engToMorse(String[] morseAlphabet, String a, char[] engAlphabet)
     {
         StringBuilder str = new StringBuilder();
@@ -37,6 +36,8 @@ public class TranslateActivity extends AppCompatActivity {
         english = findViewById(R.id.engText);
         output = findViewById(R.id.morseText);
 
+
+
         char[] engAlphabet = { 'a', 'à', 'b', 'c', 'd', 'e', 'è', 'é',
                 'f', 'g', 'h', 'i', 'ì', 'j', 'k', 'l',
                 'm', 'n', 'o', 'ò', 'p', 'q', 'r', 's',
@@ -55,29 +56,15 @@ public class TranslateActivity extends AppCompatActivity {
                 "..--..", ".----.", "-.--.-", "---...", "-.-.--", "...-..-", "-.-.-.", ".-.-.-",
                 ".--.-.", ".-..-.", "-..-.", "--...-", "-...-", "..--.-", ".-.-."};
 
-        /*
-        translateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(english.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(), "Please enter some English text", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    engToMorse(morseAlphabet, english.getText().toString().toLowerCase(), engAlphabet);
-                }
-            }
-        });
-    */
-
         english.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                output.setText(R.string.preText);
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                engToMorse(morseAlphabet, english.getText().toString().toLowerCase(), engAlphabet);
+                engToMorse(morseAlphabet, english.getText().toString(), engAlphabet);
             }
 
             @Override

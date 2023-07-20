@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TranslateActivity"
-    android:background="@color/yellow">
+    android:background="@drawable/background_2"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/textView"
@@ -21,19 +22,20 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <EditText
-        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
         android:paddingLeft="14dp"
         android:paddingTop="6dp"
         android:paddingBottom="6dp"
         android:paddingRight="14dp"
-        android:layout_height="150dp"
         android:hint="@string/hint"
         android:textColor="@color/black"
         android:verticalScrollbarPosition="right"
-        android:background="@drawable/button_style"
+        android:background="@drawable/translation_field"
         android:gravity="top|start"
         android:inputType="textMultiLine"
         android:lines="10"
@@ -45,15 +47,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.14"
-        tools:ignore="LabelFor"
-        android:id="@+id/engText"/>
+        android:id="@+id/engText"
+        android:importantForAutofill="no" />
 
-    <TextView
+    <EditText
         android:id="@+id/morseText"
-        android:layout_width="352dp"
-        android:layout_height="150dp"
-        android:background="@drawable/button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/translation_field"
         android:gravity="top|start"
+        android:hint="@string/logo"
         android:lines="10"
         android:maxLines="10"
         android:minLines="7"
@@ -62,15 +66,16 @@
         android:paddingRight="14dp"
         android:paddingBottom="6dp"
         android:textColor="@color/black"
-        android:verticalScrollbarPosition="right"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:verticalScrollbarPosition="right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.524"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toBottomOf="@+id/engText"
+        app:layout_constraintVertical_bias="0"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
